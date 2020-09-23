@@ -27,6 +27,14 @@ describe('star-wars', function(){
 
 		})
 
+		it("should return an array of random items if passed a number", function(){
+			var randomItems = starWars.random(3)
+			expect(randomItems).to.have.length(3);
+			randomItems.forEach(item => {
+				expect(starWars.all).to.include(item);
+			})
+		})
+
 	})
 
 })
